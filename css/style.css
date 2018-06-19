@@ -1,0 +1,392 @@
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+/*PC - Início*/
+@font-face {
+    font-family: Lithos;
+    src: url(../font/LithosProBlack.ttf);
+}
+html, body {
+	width: 100%;
+	height: 100%;
+	font-family: 'Lithos', sans-serif;
+	justify-content: center;
+	align-content: stretch;
+	align-items: stretch;
+}
+
+/* start - flexbox container*/
+html, body {
+	display: flex;
+ 	flex-wrap: wrap;
+ 	margin: 0 auto;
+}
+/* end - flexbox container*/
+
+/* start - flexbox child*/
+body {
+	/*border: 1px solid red;*/
+	justify-content: flex-end;
+	align-content: stretch;
+	align-items: stretch;
+	flex-flow: column;
+	flex-grow: 1;
+	/*background parameters*/
+	background-image: url(../img/Background.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+/*end - flexbox child*/
+
+/*start - relative vs absolute*/
+body {
+	position: relative; /*to the child*/
+}
+/*end - relative vs absolute*/
+header{
+	/*border: 2px solid black;*/
+	display: flex;
+ 	flex-wrap: wrap;
+ 	flex-flow: column;
+ 	justify-content: center;
+ 	align-content: stretch;
+ 	align-items: stretch;
+ 	flex-grow: 2;
+ 	position: relative;
+}
+#titleSite {
+	/*border: 2px solid red;*/
+	display: flex;
+	flex-flow: column;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: center;
+	flex-grow: 1;
+}
+.pTitle {
+	/*border: 5px solid yellow;*/
+	margin: 0 auto;
+	padding: 0;
+	white-space: nowrap;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+.pTitle:nth-child(1) {
+	/*border: 5px solid yellow;*/
+	font-size: calc(1.6rem + 3vw);
+	line-height: calc(2.5rem + 2vw);
+}
+.pTitle:nth-child(2) {
+	/*border: 5px solid green;*/
+	font-size: calc(.5rem + 2vw);
+	line-height: calc(.5rem + 1vw);
+}
+#search {
+	/*border: 2px solid green;*/
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	position: relative;
+	flex-grow: 10;
+}
+#boxSearchArea {
+	/*border: 5px solid brown;*/
+	/*position: absolute - gambiarra pra conseguir manipular height*/
+	position: absolute;
+	height: 80%;
+	width: 50%;
+	display: flex;
+	justify-content: flex-end;
+	align-content: space-around;
+	align-items: stretch;
+}
+#boxInputText {
+	/*border: 5px solid blue;*/
+	flex-grow: 6;
+	display: flex;
+	flex-flow: row;
+	justify-content: center;
+	align-content: center;
+	align-items: stretch;
+}
+#boxInput_L {
+	flex-grow: 1;
+	background-image: url(../img/BS_L.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;	
+}
+#boxInput_Middle {
+	background-image: url(../img/BS_Middle.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;	
+	width: 90%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: stretch;
+}
+input {
+	border: none;
+	height: 50%;
+	width: 100%;
+	font-family: 'Lithos', sans-serif;
+}
+#boxInput_R {
+	flex-grow: 1;
+	background-image: url(../img/BS_R.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;	
+}
+#boxQ {
+	border: 10px solid;
+	border-color: rgba(255, 12, 1, 0);
+	background-image: url(../img/Box_Quest.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	/*PC 15% / Mobile 25%*/
+	width: 13%;	
+}
+
+#cartItems {
+	border: 10px solid;
+	border-color: rgba(255, 255, 1, 0);
+	position: absolute;
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-start;
+	align-content: flex-end;
+	float: right;
+	right: 0;
+	height: 100%;
+	width: 12%;
+}
+#cartItems_Mobile {
+	display: none;
+}
+#numberItems {
+	/*border: 2px solid red;*/
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	height: 20%;
+	width: 30%;
+	background-image: url(../img/Box_Number.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+#numberItems p {
+	/*border: 2px solid black;*/
+	line-height: 1;
+	margin: 0;
+	color: blue;
+	font-size: calc(.1rem + 1vw);
+}
+#cartIcon {
+	/*border: 2px solid green;*/
+	background-image: url(../img/Carrinho.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	height: 20%;
+	width: 40%;
+}
+content{
+	/*border: 5px solid white;*/
+	display: flex;
+	flex-flow: column;
+	justify-content: space-around;
+	align-content: stretch;
+	align-items: center;
+	flex-grow: 8;
+}
+#banner {
+	background-image: url(../img/Poster3.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	border: 5px solid yellow;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	flex-grow: 1;
+}
+#banner, #produtos {
+	width: 70%;
+}
+#produtos {
+	border: 5px solid brown;
+}
+#items {
+	border: 2px solid green;
+}
+#produtos, #items {
+	display: flex;
+	justify-content: space-around;
+	align-content: stretch;
+	align-items: stretch;
+	flex-grow: 1;
+}
+.item {
+	/*border: 3px solid gray;*/
+	flex-grow: 1;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+}
+.items_Mobile {
+	display: none;
+}
+#it1 {
+   /*border: 3px solid red;*/
+   background-image: url(../img/acessorios.png);
+   background-size: 90% 90%;
+   background-repeat: no-repeat;
+   background-position: center;
+}
+#it2 {
+   /*border: 3px solid green;*/
+   background-image: url(../img/brinquedos.png);
+   background-size: 90% 90%;
+   background-repeat: no-repeat;
+   background-position: center;
+}
+#it3 {
+   /*border: 3px solid blue;*/
+   background-image: url(../img/roupas.png);
+   background-size: 90% 90%;
+   background-repeat: no-repeat;
+   background-position: center;
+}
+#it4 {
+   /*border: 3px solid yellow;*/
+   background-image: url(../img/games.png);
+   background-size: 90% 90%;
+   background-repeat: no-repeat;
+   background-position: center;
+}
+footer{
+	/*border: 3px solid black;*/
+	display: flex;
+	justify-content: flex-end;
+	flex-grow: .1;
+}
+#autores {
+	/*border: 2px solid red;*/
+	flex-grow: 50;
+}
+#sobre {
+	/*border: 2px solid green;*/
+	flex-grow: 3;
+}
+#contato {
+	/*border: 2px solid blue;*/
+	flex-grow: 1;
+}
+.rodape {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+}
+.pRodape {
+	/*border: 1px solid black;*/
+	margin: 0 auto;
+	color: white;
+}
+a:link {
+    text-decoration: none;
+}
+@media only screen and (min-width: 992px) {
+
+}
+/*PC - Fim*/
+
+/*Mobile - Início (Moto G Play W:720 H:1280) Requisito trabalho web max-width: 767px*/
+@media only screen and (max-width: 767px) {
+	body {
+        border: 1px solid red;
+    }
+    header {
+    	flex-grow: 2;
+    }
+    #titleSite {
+    	border: 1px solid black;
+    	flex-grow: 2;
+    }
+    #search {
+    	border: 1px solid green;
+    	flex-grow: 1;
+    }
+    .pTitle:nth-child(1) {
+    	border: 1px solid black;
+		line-height: calc(1.8rem + 1vw);
+		color: blue;
+	}
+    .pTitle:nth-child(2) {
+    	border: 1px solid red;
+		line-height: calc(.1rem + 1vw);
+		color: blue;
+	}
+    #banner, #produtos {
+		width: 95%;
+	}
+	#produtos {
+		flex-grow: 4;
+		flex-flow: column;
+		border: 2px solid black;
+		justify-content: center;
+		align-items: stretch;
+		align-content: stretch;
+	}
+	#items {
+		display: none;
+	}
+	.items_Mobile {
+		display: flex;
+		border: 2px solid blue;
+		flex-grow: 1;
+	}
+    #search {
+    	flex-grow: 500;
+    }
+    p, input {
+    	font-size: calc(.3rem + 1vw);
+    }
+    #cartItems {
+    	display: none;
+    }
+    #cartItems_Mobile {
+    	/*border: 1px solid black;*/
+    	display: flex;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+    	width: 15%;
+    }
+    #numberItems, #cartIcon {
+    	width: 45%;
+    	height: 60%;
+    }
+    #numberItems p {
+    	font-size: calc(.1rem + 1vh);
+    }
+    #boxSearchArea {
+    	width: 90%;
+    }
+    #boxQ {
+    	border: 4px solid;
+    	border-color: rgba(255, 12, 1, 0);
+    	width: 12%;	
+    }
+    footer {
+    	flex-grow: .2;
+    }
+}
+/*Mobile - Fim*/
