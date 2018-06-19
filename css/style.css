@@ -402,5 +402,8 @@ a:link {
     .pRodape {
     	-webkit-text-stroke: .2px black;
     }
+    #sobre {
+    	flex-grow: 4;
+    }
 }
 /*Mobile - Fim*/
