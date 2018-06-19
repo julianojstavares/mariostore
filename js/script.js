@@ -1,4 +1,4 @@
 window.onload = function() {
   //slideshow
-  //alert("Olá mundo!"); 
+  //alert("Seja bem-vindo!"); 
 };

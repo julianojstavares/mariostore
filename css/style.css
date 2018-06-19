@@ -322,7 +322,7 @@ a:link {
     text-decoration: none;
 }
 @media only screen and (min-width: 992px) {
-
+	/*Site baseado em PC*/	
 }
 /*PC - Fim*/
 
@@ -336,6 +336,9 @@ a:link {
     }
     content {
     	flex-grow: 3;
+    }
+    article {
+    	font-size: calc(.2rem + 1vw);
     }
     #titleSite {
     	/*border: 1px solid black;*/
